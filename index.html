@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Mano Dictionary</title>
+  <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://kit.fontawesome.com/9e0ab445c3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+ <!--nevbar--> 
+ <nav>
+  <div class="nav_box">
+  <span>Mano Dictionary</span> 
+  </div>
+  <input type="search"id="search_input" placeholder="Search any words..." onkeyup="inputpress()" />
+  <div class="nav_box">
+    <i class="fas fa-cog "></i>
+  </div>
+ </nav>
+ <div class="wordbody_container" id="wordbody_container">
+  <ul class="words_container" id="words_container">
+  </ul>
+   <!--side bar searching--> 
+ <div id="sidebar_container">
+  <span onclick="A()" id="A">A</span>
+  <span onclick="B()" id="B">B</span>
+  <span onclick="C()" id="C">C</span>
+  <span onclick="D()" id="D">D</span>
+  <span onclick="E()" id="E">E</span>
+  <span onclick="F()" id="F">F</span>
+  <span onclick="G()" id="G">G</span>
+  <span onclick="H()" id="H">H</span>
+  <span onclick="I()" id="I">I</span>
+  <span onclick="J()" id="J">J</span>
+  <span onclick="K()" id="K">K</span>
+  <span onclick="L()" id="L">L</span>
+  <span onclick="M()" id="M">M</span>
+  <span onclick="N()" id="N">N</span>
+  <span onclick="O()" id="O">O</span>
+  <span onclick="P()" id="P">P</span>
+  <span onclick="Q()" id="Q">Q</span>
+  <span onclick="R()" id="R">R</span>
+  <span onclick="S()" id="S">S</span>
+  <span onclick="T()" id="T">T</span>
+  <span onclick="U()" id="U">U</span>
+  <span onclick="V()" id="V">V</span>
+  <span onclick="W()" id="W">W</span>
+  <span onclick="X()" id="X">X</span>
+  <span onclick="Y()" id="Y">Y</span>
+  <span onclick="Z()" id="Z">Z</span>
+ </div>
+ </div>
+ 
+ <!--Add New words --> 
+ <div id="Add_container" onclick="Add_container()">
+   <i class="fas fa-plus"></i>
+ </div>
+ 
+  <div id="Add_input_container">
+<i class="fas fa-arrow-left" onclick="closeAddPage()" style="transform: scale(0.9); padding : 10px 20px; margin-top:10px;"></i>
+
+<!--password protected--> 
+<div id="password_container">
+  <input type="password" id="password"  placeholder="Inter Password"/>
+  <button onclick="Unlock()"><i class="fas fa-key"></i></button>
+</div>
+<br> <br> 
+<!--Word add input--> 
+<form onsubmit="return false" id="InputForm">
+  <input type="text" placeholder="English Word" id="engWordInput" />
+    <input type="text" placeholder="Hindi Meaning" id="hindiWordInput" />
+    <button type="submit">Submit Word</button>
+</form>
+ </div>
+ 
+ <script src="index.js" type="text/javascript" charset="utf-8"></script>
+  <script src="firebase.js" type="module" charset="utf-8"></script>
+ 
+</body>
